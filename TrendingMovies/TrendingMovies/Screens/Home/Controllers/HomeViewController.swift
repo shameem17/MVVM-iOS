@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     
     //IBOutlets
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     //viewModel
     let viewModel: HomeViewModel = HomeViewModel()
@@ -32,7 +32,7 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         self.viewModel.getMovieList()
     }
-   
+    
     func configure(){
         //self.title = "Trending Movie Lsit"
         self.view.backgroundColor = .systemIndigo
@@ -58,12 +58,18 @@ class HomeViewController: UIViewController {
             guard let movies = movies else{
                 return
             }
+            //binding here
+            print("\(movies.count)")
         }
-        
-        
+    }
+    
+    func openDetails(for movie: HomeTableViewMovie){
+        let detailsMovieModel = DetailsMovieModel(movie: movie)
+        let detailsViewController = DetailsViewController(movieDetails: detailsMovieModel)
+        self.navigationController?.pushViewController(detailsViewController, animated: true)
     }
     
     
-   
-
+    
+    
 }

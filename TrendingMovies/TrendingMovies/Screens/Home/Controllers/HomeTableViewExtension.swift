@@ -37,7 +37,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
-
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected \(viewModel.homeTableViewMovie[indexPath.row].title)")
+        let selected = viewModel.homeTableViewMovie[indexPath.row]
+        self.openDetails(for: selected)
+        
     }
     
     

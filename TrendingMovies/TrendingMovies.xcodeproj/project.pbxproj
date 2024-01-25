@@ -30,6 +30,9 @@
 		BF26A1712B6290B500BBE77C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A1702B6290B500BBE77C /* UIViewExtension.swift */; };
 		BF26A1732B6292CA00BBE77C /* HomeTableViewMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A1722B6292CA00BBE77C /* HomeTableViewMovie.swift */; };
 		BF26A1752B62A0B700BBE77C /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A1742B62A0B700BBE77C /* UIImageViewExtension.swift */; };
+		BF26A17D2B62A63F00BBE77C /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A17B2B62A63F00BBE77C /* DetailsViewController.swift */; };
+		BF26A17E2B62A63F00BBE77C /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF26A17C2B62A63F00BBE77C /* DetailsViewController.xib */; };
+		BF26A1802B62ACED00BBE77C /* DetailsMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A17F2B62ACED00BBE77C /* DetailsMovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		BF26A1702B6290B500BBE77C /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		BF26A1722B6292CA00BBE77C /* HomeTableViewMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewMovie.swift; sourceTree = "<group>"; };
 		BF26A1742B62A0B700BBE77C /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		BF26A17B2B62A63F00BBE77C /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		BF26A17C2B62A63F00BBE77C /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		BF26A17F2B62ACED00BBE77C /* DetailsMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsMovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +237,7 @@
 		BF26A14F2B62687500BBE77C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BF26A1762B62A5A400BBE77C /* Description */,
 				BF26A14C2B62686900BBE77C /* Home */,
 			);
 			path = Screens;
@@ -318,6 +325,48 @@
 				BF26A1742B62A0B700BBE77C /* UIImageViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BF26A1762B62A5A400BBE77C /* Description */ = {
+			isa = PBXGroup;
+			children = (
+				BF26A17A2B62A5C700BBE77C /* Controllers */,
+				BF26A1792B62A5BF00BBE77C /* ViewModel */,
+				BF26A1782B62A5B900BBE77C /* View */,
+				BF26A1772B62A5B400BBE77C /* Model */,
+			);
+			path = Description;
+			sourceTree = "<group>";
+		};
+		BF26A1772B62A5B400BBE77C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF26A17F2B62ACED00BBE77C /* DetailsMovieModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF26A1782B62A5B900BBE77C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF26A1792B62A5BF00BBE77C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BF26A17A2B62A5C700BBE77C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF26A17B2B62A63F00BBE77C /* DetailsViewController.swift */,
+				BF26A17C2B62A63F00BBE77C /* DetailsViewController.xib */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +480,7 @@
 			files = (
 				BF26A1282B62681D00BBE77C /* LaunchScreen.storyboard in Resources */,
 				BF26A1252B62681D00BBE77C /* Assets.xcassets in Resources */,
+				BF26A17E2B62A63F00BBE77C /* DetailsViewController.xib in Resources */,
 				BF26A16E2B628DB800BBE77C /* HomeTableViewCell.xib in Resources */,
 				BF26A15C2B626A1100BBE77C /* HomeViewController.xib in Resources */,
 			);
@@ -560,6 +610,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF26A1802B62ACED00BBE77C /* DetailsMovieModel.swift in Sources */,
 				BF26A1642B626F9100BBE77C /* APIDataError.swift in Sources */,
 				BF26A16A2B627E1500BBE77C /* Observer.swift in Sources */,
 				BF26A1712B6290B500BBE77C /* UIViewExtension.swift in Sources */,
@@ -571,6 +622,7 @@
 				BF26A1682B62715000BBE77C /* TrendingMovies.swift in Sources */,
 				BF26A1602B626CB600BBE77C /* HomeViewModel.swift in Sources */,
 				BF26A1662B626FE500BBE77C /* APIManager.swift in Sources */,
+				BF26A17D2B62A63F00BBE77C /* DetailsViewController.swift in Sources */,
 				BF26A1752B62A0B700BBE77C /* UIImageViewExtension.swift in Sources */,
 				BF26A1732B6292CA00BBE77C /* HomeTableViewMovie.swift in Sources */,
 			);
