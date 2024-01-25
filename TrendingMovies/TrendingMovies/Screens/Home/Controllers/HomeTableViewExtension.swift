@@ -26,7 +26,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = viewModel.movieList[indexPath.row].name
+        cell.textLabel?.text = viewModel.trendingMovies.value?[indexPath.row].name ?? viewModel.trendingMovies.value?[indexPath.row].title ?? ""
         return cell
     }
     

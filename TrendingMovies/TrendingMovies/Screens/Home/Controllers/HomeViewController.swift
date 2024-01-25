@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
     
     //IBOutlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!    
     
     //viewModel
     let viewModel: HomeViewModel = HomeViewModel()
@@ -19,6 +20,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Trending Movies"
         configure()
+        bindingModel()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,6 +40,21 @@ class HomeViewController: UIViewController {
         self.tableView.reloadData()
     }
     
+    func bindingModel(){
+        viewModel.isLoading.binding {[weak self] isLoading in
+            guard let isLoading = isLoading, let self = self else{
+                return
+            }
+            DispatchQueue.main.async {
+                if isLoading{
+                    self.activityIndicator.startAnimating()
+                }else{
+                    self.activityIndicator.stopAnimating()
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
     
     
    

@@ -21,6 +21,7 @@
 		BF26A1642B626F9100BBE77C /* APIDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A1632B626F9100BBE77C /* APIDataError.swift */; };
 		BF26A1662B626FE500BBE77C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A1652B626FE500BBE77C /* APIManager.swift */; };
 		BF26A1682B62715000BBE77C /* TrendingMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A1672B62715000BBE77C /* TrendingMovies.swift */; };
+		BF26A16A2B627E1500BBE77C /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A1692B627E1500BBE77C /* Observer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		BF26A1632B626F9100BBE77C /* APIDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataError.swift; sourceTree = "<group>"; };
 		BF26A1652B626FE500BBE77C /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		BF26A1672B62715000BBE77C /* TrendingMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovies.swift; sourceTree = "<group>"; };
+		BF26A1692B627E1500BBE77C /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				BF26A1552B62688A00BBE77C /* App */,
-				BF26A1542B62688600BBE77C /* Class */,
+				BF26A1542B62688600BBE77C /* Classes */,
 				BF26A1532B62688300BBE77C /* Constants */,
 				BF26A1522B62688000BBE77C /* ErrorModel */,
 				BF26A14B2B62686400BBE77C /* DataModel */,
@@ -214,11 +216,12 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		BF26A1542B62688600BBE77C /* Class */ = {
+		BF26A1542B62688600BBE77C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BF26A1692B627E1500BBE77C /* Observer.swift */,
 			);
-			path = Class;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		BF26A1552B62688A00BBE77C /* App */ = {
@@ -386,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF26A1642B626F9100BBE77C /* APIDataError.swift in Sources */,
+				BF26A16A2B627E1500BBE77C /* Observer.swift in Sources */,
 				BF26A1622B626F3B00BBE77C /* Constants.swift in Sources */,
 				BF26A11C2B62681C00BBE77C /* AppDelegate.swift in Sources */,
 				BF26A15B2B626A1100BBE77C /* HomeViewController.swift in Sources */,
