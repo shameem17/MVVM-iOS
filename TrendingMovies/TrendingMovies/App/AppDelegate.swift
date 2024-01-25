@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TrendingMovies
 //
-//  Created by Shameem on 24/1/24.
+//  Created by Shameem on 25/1/24.
 //
 
 import UIKit
@@ -10,8 +10,8 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
     var window: UIWindow?
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     
-
 
 }
 
