@@ -19,7 +19,7 @@ struct TrendingMovies: Codable {
         case totalResults = "total_results"
     }
 }
-
+ 
 // MARK: - Movie
 struct Movie: Codable {
     let adult: Bool

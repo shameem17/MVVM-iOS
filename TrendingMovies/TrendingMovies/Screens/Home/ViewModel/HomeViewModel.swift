@@ -12,14 +12,20 @@ final class HomeViewModel{
     var isLoading: Observer<Bool> = Observer(false)
     var trendingMovies: Observer<[Movie]> = Observer(nil)
     var movieList: [Movie] = []
-    
+    var homeTableViewMovie: [HomeTableViewMovie] = [] 
     func numberOfSections() ->Int{
         return 1
     }
     
     func numberOfRowsInSection(in section: Int) -> Int{
-        print("called")
         return self.trendingMovies.value?.count ?? 0
+    }
+    
+    func getMovieName(for movie: Movie?) -> String{
+        guard let movie = movie else{
+            return ""
+        }
+        return movie.name ?? movie.title ?? ""
     }
     
     func getMovieList(){
@@ -31,14 +37,23 @@ final class HomeViewModel{
             self?.isLoading.value = false
             switch resutl{
             case .success(let movies):
-                print("Movies count = \(movies.results.count)")
-                self?.trendingMovies.value = movies.results
-                self?.movieList = movies.results
+                DispatchQueue.main.async{
+                    
+                    print("Movies count = \(movies.results.count)")
+                    self?.trendingMovies.value = movies.results
+                    self?.movieList = movies.results
+                    self?.mapMovie()
+                }
                 break
             case .failure(let error):
                 print("Error \(error)")
             }
         }
+    }
+    
+    func mapMovie(){
+        self.homeTableViewMovie = self.movieList.compactMap({ HomeTableViewMovie(movie: $0) })
+        //print(homeTableViewMovie)
     }
     
 }

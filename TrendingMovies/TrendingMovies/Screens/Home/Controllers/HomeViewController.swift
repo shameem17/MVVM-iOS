@@ -54,6 +54,13 @@ class HomeViewController: UIViewController {
                 }
             }
         }
+        viewModel.trendingMovies.binding { movies in
+            guard let movies = movies else{
+                return
+            }
+        }
+        
+        
     }
     
     
