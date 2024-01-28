@@ -9,6 +9,8 @@ import Foundation
 
 final class HomeViewModel{
     
+    var isLoading: Observer<Bool> = Observer(false)
+    
     var countries: [Country] = []
     
     func numberOfSections() -> Int{
@@ -19,7 +21,12 @@ final class HomeViewModel{
     }
     
     func getCountries(){
+        if isLoading.value ?? true {
+            return
+        }
+        isLoading.value = true
         APIManager.shared.getCountry { [weak self] result in
+            self?.isLoading.value = false
             switch result{
             case .success(let countries):
                 self?.countries = countries

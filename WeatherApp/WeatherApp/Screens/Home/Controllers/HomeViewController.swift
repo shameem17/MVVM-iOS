@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         configure()
+        binding()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,6 +31,22 @@ class HomeViewController: UIViewController {
     func configure(){
         self.view.backgroundColor = .systemBlue
         setupTableView()
+    }
+    
+    func binding(){
+        viewModel.isLoading.binding { [weak self] isLoading in
+            guard let isLoading = isLoading, let self = self else{
+                return
+            }
+            DispatchQueue.main.async{
+                if isLoading{
+                    print("Waiting to be loaded")
+                }else{
+                    print("Loding finished")
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 
 }
