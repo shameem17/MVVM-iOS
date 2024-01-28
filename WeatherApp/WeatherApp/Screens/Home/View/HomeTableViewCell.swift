@@ -38,6 +38,7 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     func propagateData(_ country: Country){
+        self.imageLabel.setImage(with: country.flags.png)
         self.nameLabel.text = country.name.common
         self.capitalLable.text = country.capital?.first
         self.latlongLabel.text = "\(country.latlng[0]),\(country.latlng[1])"

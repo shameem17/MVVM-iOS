@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import Alamofire
 final class APIManager{
     public static let shared = APIManager()
     
@@ -20,22 +20,14 @@ final class APIManager{
             return
         }
         
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data , error == nil else{
-                completion(.failure(.invalidData))
-                return
-            }
-            
-            do{
-                let countries = try JSONDecoder().decode([Country].self, from: data)
-                print(countries.count)
+        AF.request(url).validate().responseDecodable(of: [Country].self) { response in
+            switch response.result{
+            case .success(let countries):
                 completion(.success(countries))
-            }catch{
-                completion(.failure(.parsingError))
-                
+                break
+            case .failure(let error):
+                completion(.failure(.error(error)))
             }
-            
-        }.resume()
-        
+        }
     }
 }
