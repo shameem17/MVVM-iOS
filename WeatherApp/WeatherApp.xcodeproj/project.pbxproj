@@ -15,6 +15,13 @@
 		BFDFDD522B6564BD00BA2619 /* WeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD512B6564BD00BA2619 /* WeatherAppUITestsLaunchTests.swift */; };
 		BFDFDD6F2B65672400BA2619 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD6D2B65672400BA2619 /* HomeViewController.swift */; };
 		BFDFDD702B65672400BA2619 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFDFDD6E2B65672400BA2619 /* HomeViewController.xib */; };
+		BFDFDD722B660E9E00BA2619 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD712B660E9E00BA2619 /* Country.swift */; };
+		BFDFDD742B66115900BA2619 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD732B66115900BA2619 /* HomeViewModel.swift */; };
+		BFDFDD762B6611FE00BA2619 /* HomeTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD752B6611FE00BA2619 /* HomeTableViewExtension.swift */; };
+		BFDFDD782B66133D00BA2619 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD772B66133D00BA2619 /* Constants.swift */; };
+		BFDFDD7A2B66137700BA2619 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD792B66137700BA2619 /* ErrorModel.swift */; };
+		BFDFDD7C2B6613DD00BA2619 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD7B2B6613DD00BA2619 /* APIManager.swift */; };
+		BFDFDD7E2B661D7300BA2619 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD7D2B661D7300BA2619 /* Observer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		BFDFDD512B6564BD00BA2619 /* WeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BFDFDD6D2B65672400BA2619 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BFDFDD6E2B65672400BA2619 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		BFDFDD712B660E9E00BA2619 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		BFDFDD732B66115900BA2619 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		BFDFDD752B6611FE00BA2619 /* HomeTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewExtension.swift; sourceTree = "<group>"; };
+		BFDFDD772B66133D00BA2619 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BFDFDD792B66137700BA2619 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		BFDFDD7B2B6613DD00BA2619 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		BFDFDD7D2B661D7300BA2619 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +153,7 @@
 		BFDFDD5F2B6564E400BA2619 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BFDFDD7D2B661D7300BA2619 /* Observer.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -177,6 +192,7 @@
 		BFDFDD642B6564FA00BA2619 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				BFDFDD7B2B6613DD00BA2619 /* APIManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -184,6 +200,7 @@
 		BFDFDD652B6564FE00BA2619 /* ErrorModel */ = {
 			isa = PBXGroup;
 			children = (
+				BFDFDD792B66137700BA2619 /* ErrorModel.swift */,
 			);
 			path = ErrorModel;
 			sourceTree = "<group>";
@@ -191,6 +208,7 @@
 		BFDFDD662B65650300BA2619 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				BFDFDD712B660E9E00BA2619 /* Country.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -198,6 +216,7 @@
 		BFDFDD672B65650700BA2619 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				BFDFDD772B66133D00BA2619 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -213,6 +232,7 @@
 		BFDFDD692B6566AC00BA2619 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BFDFDD732B66115900BA2619 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -229,6 +249,7 @@
 			children = (
 				BFDFDD6D2B65672400BA2619 /* HomeViewController.swift */,
 				BFDFDD6E2B65672400BA2619 /* HomeViewController.xib */,
+				BFDFDD752B6611FE00BA2619 /* HomeTableViewExtension.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -375,8 +396,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFDFDD7C2B6613DD00BA2619 /* APIManager.swift in Sources */,
+				BFDFDD7E2B661D7300BA2619 /* Observer.swift in Sources */,
+				BFDFDD7A2B66137700BA2619 /* ErrorModel.swift in Sources */,
+				BFDFDD762B6611FE00BA2619 /* HomeTableViewExtension.swift in Sources */,
 				BFDFDD2F2B6564BB00BA2619 /* AppDelegate.swift in Sources */,
+				BFDFDD722B660E9E00BA2619 /* Country.swift in Sources */,
 				BFDFDD6F2B65672400BA2619 /* HomeViewController.swift in Sources */,
+				BFDFDD742B66115900BA2619 /* HomeViewModel.swift in Sources */,
+				BFDFDD782B66133D00BA2619 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
