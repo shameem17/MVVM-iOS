@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="WeatherApp" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="68C-cG-bpY" id="o98-3k-hPI"/>
                 <outlet property="tableView" destination="H73-7f-wbI" id="Uzn-th-2e2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,10 +24,16 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="68C-cG-bpY">
+                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                    <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="68C-cG-bpY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3oy-Lm-OtJ"/>
+                <constraint firstItem="68C-cG-bpY" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="5y4-xy-fb1"/>
                 <constraint firstItem="H73-7f-wbI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Qw0-RL-QOf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H73-7f-wbI" secondAttribute="trailing" id="Yh9-6u-QjZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="H73-7f-wbI" secondAttribute="bottom" id="x4O-JG-iKY"/>

@@ -12,7 +12,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func setupTableView(){
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.register(HomeTableViewCell.register(), forCellReuseIdentifier: HomeTableViewCell.identifier)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -24,9 +24,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = viewModel.countries[indexPath.row].name.common
+        let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as? HomeTableViewCell
         
+        guard let cell = cell else{
+            return UITableViewCell()
+        }
+        
+        let country = viewModel.countries[indexPath.row]
+        cell.propagateData(country)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
 }

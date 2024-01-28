@@ -10,6 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
 
     //IBOutlets
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     
     //viewModel
@@ -40,8 +41,10 @@ class HomeViewController: UIViewController {
             }
             DispatchQueue.main.async{
                 if isLoading{
+                    self.activityIndicator.startAnimating()
                     print("Waiting to be loaded")
                 }else{
+                    self.activityIndicator.stopAnimating()
                     print("Loding finished")
                     self.tableView.reloadData()
                 }
