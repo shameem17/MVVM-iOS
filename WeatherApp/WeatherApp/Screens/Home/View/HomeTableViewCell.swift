@@ -42,7 +42,6 @@ class HomeTableViewCell: UITableViewCell {
         self.nameLabel.text = country.name.common
         self.capitalLable.text = country.capital?.first
         self.latlongLabel.text = "\(country.latlng[0]),\(country.latlng[1])"
-        self.imageLabel.image = UIImage(named: "arrow")
         
     }
     

@@ -18,5 +18,6 @@ target 'WeatherApp' do
 
 pod 'Alamofire'
 pod 'Kingfisher'
+pod 'SDWebImage'
 
 end
