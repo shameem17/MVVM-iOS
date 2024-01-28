@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		98D6B0CAF23531C2FCE3C8B3 /* Pods_WeatherAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C8DDF75EBC57631F956CF1 /* Pods_WeatherAppTests.framework */; };
 		9C462C444B3034EC4B6E8046 /* Pods_WeatherApp_WeatherAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB010C4F8ED8CA9512D7C173 /* Pods_WeatherApp_WeatherAppUITests.framework */; };
+		BFCEF3F02B66555D00BFFB21 /* HomeCountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEF3EF2B66555D00BFFB21 /* HomeCountryModel.swift */; };
 		BFDFDD2F2B6564BB00BA2619 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD2E2B6564BB00BA2619 /* AppDelegate.swift */; };
 		BFDFDD382B6564BC00BA2619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDFDD372B6564BC00BA2619 /* Assets.xcassets */; };
 		BFDFDD3B2B6564BC00BA2619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDFDD392B6564BC00BA2619 /* LaunchScreen.storyboard */; };
@@ -55,6 +56,7 @@
 		40F5CBAD28CB75D9329AB8E8 /* Pods-WeatherApp-WeatherAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp-WeatherAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherApp-WeatherAppUITests/Pods-WeatherApp-WeatherAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7304E16BD15DF50F97B35DDB /* Pods-WeatherAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherAppTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		BB010C4F8ED8CA9512D7C173 /* Pods_WeatherApp_WeatherAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp_WeatherAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFCEF3EF2B66555D00BFFB21 /* HomeCountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCountryModel.swift; sourceTree = "<group>"; };
 		BFDFDD2B2B6564BB00BA2619 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDFDD2E2B6564BB00BA2619 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFDFDD372B6564BC00BA2619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		BFDFDD5E2B6564DE00BA2619 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BFCEF3EF2B66555D00BFFB21 /* HomeCountryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 			files = (
 				BFDFDD7C2B6613DD00BA2619 /* APIManager.swift in Sources */,
 				BFDFDD7E2B661D7300BA2619 /* Observer.swift in Sources */,
+				BFCEF3F02B66555D00BFFB21 /* HomeCountryModel.swift in Sources */,
 				BFDFDD882B66323500BA2619 /* UIImageViewExtension.swift in Sources */,
 				BFDFDD862B662A0B00BA2619 /* UIViewExtension.swift in Sources */,
 				BFDFDD7A2B66137700BA2619 /* ErrorModel.swift in Sources */,

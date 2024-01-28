@@ -12,6 +12,7 @@ final class HomeViewModel{
     var isLoading: Observer<Bool> = Observer(false)
     
     var countries: [Country] = []
+    var homeCountryModel: [HomeCountryModel] = []
     
     func numberOfSections() -> Int{
         return 1
@@ -30,6 +31,7 @@ final class HomeViewModel{
             switch result{
             case .success(let countries):
                 self?.countries = countries
+                self?.mapCountry(countries)
                 break
             case .failure(let error):
                 print("Error =\(error)")
@@ -37,6 +39,10 @@ final class HomeViewModel{
                 
             }
         }
+    }
+    
+    func mapCountry(_ countries: [Country]){
+        self.homeCountryModel = countries.compactMap({ HomeCountryModel($0) })
     }
 }
 

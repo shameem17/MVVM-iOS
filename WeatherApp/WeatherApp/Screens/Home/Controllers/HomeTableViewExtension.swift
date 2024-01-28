@@ -30,7 +30,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
             return UITableViewCell()
         }
         
-        let country = viewModel.countries[indexPath.row]
+        let country = viewModel.homeCountryModel[indexPath.row]
         cell.propagateData(country)
         return cell
     }

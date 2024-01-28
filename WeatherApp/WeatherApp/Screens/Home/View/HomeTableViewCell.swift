@@ -37,11 +37,11 @@ class HomeTableViewCell: UITableViewCell {
         self.backView.border(color: .systemMint, width: 1)
     }
     
-    func propagateData(_ country: Country){
+    func propagateData(_ country: HomeCountryModel){
         self.imageLabel.setImage(with: country.flags.png)
         self.nameLabel.text = country.name.common
-        self.capitalLable.text = country.capital?.first
-        self.latlongLabel.text = "\(country.latlng[0]),\(country.latlng[1])"
+        self.capitalLable.text = country.capital
+        self.latlongLabel.text = country.latlng
         
     }
     

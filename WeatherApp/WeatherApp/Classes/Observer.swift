@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Observer<T> {
+final class Observer<T> {
     var value: T?{
         didSet{
             DispatchQueue.main.async{
