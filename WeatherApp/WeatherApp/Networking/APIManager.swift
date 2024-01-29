@@ -8,27 +8,34 @@
 import Foundation
 import Alamofire
 
+typealias ResultHandler<T> = ((Result<T, APIError>) -> Void )
+
+
 final class APIManager{
     public static let shared = APIManager()
     
     private init() {}
     
-    func getCountry(completion: @escaping ((Result<[Country], APIError>) -> Void )){
-        let url = URL(string: Constants.API.CountryAPI.baseUrl)
-        
-        guard let url = url else{
-            completion(.failure(.invalidUrl))
+    //generic api call
+    func request<T: Codable>(
+        modelType: T.Type,
+        endPointType: EndPoints,
+        compilation: @escaping (ResultHandler<T>)
+    ){
+        guard let url = endPointType.url else{
+            compilation(.failure(.invalidUrl))
             return
         }
         
-        AF.request(url).validate().responseDecodable(of: [Country].self) { response in
+        let method = endPointType.method
+        AF.request(url, method: method).validate().responseDecodable(of: modelType.self) { response in
             switch response.result{
-            case .success(let countries):
-                completion(.success(countries))
-                break
+            case .success(let resultData):
+                compilation(.success(resultData))
             case .failure(let error):
-                completion(.failure(.error(error)))
+                compilation(.failure(.error(error)))
             }
         }
     }
+    
 }

@@ -10,6 +10,8 @@
 		98D6B0CAF23531C2FCE3C8B3 /* Pods_WeatherAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C8DDF75EBC57631F956CF1 /* Pods_WeatherAppTests.framework */; };
 		9C462C444B3034EC4B6E8046 /* Pods_WeatherApp_WeatherAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB010C4F8ED8CA9512D7C173 /* Pods_WeatherApp_WeatherAppUITests.framework */; };
 		BFCEF3F02B66555D00BFFB21 /* HomeCountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEF3EF2B66555D00BFFB21 /* HomeCountryModel.swift */; };
+		BFCEF3F32B665DE000BFFB21 /* HTTPEndPointsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEF3F22B665DE000BFFB21 /* HTTPEndPointsType.swift */; };
+		BFCEF3F72B665F2000BFFB21 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEF3F62B665F2000BFFB21 /* EndPoints.swift */; };
 		BFDFDD2F2B6564BB00BA2619 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD2E2B6564BB00BA2619 /* AppDelegate.swift */; };
 		BFDFDD382B6564BC00BA2619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDFDD372B6564BC00BA2619 /* Assets.xcassets */; };
 		BFDFDD3B2B6564BC00BA2619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDFDD392B6564BC00BA2619 /* LaunchScreen.storyboard */; };
@@ -21,7 +23,7 @@
 		BFDFDD722B660E9E00BA2619 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD712B660E9E00BA2619 /* Country.swift */; };
 		BFDFDD742B66115900BA2619 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD732B66115900BA2619 /* HomeViewModel.swift */; };
 		BFDFDD762B6611FE00BA2619 /* HomeTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD752B6611FE00BA2619 /* HomeTableViewExtension.swift */; };
-		BFDFDD782B66133D00BA2619 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD772B66133D00BA2619 /* Constants.swift */; };
+		BFDFDD782B66133D00BA2619 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD772B66133D00BA2619 /* APIConstants.swift */; };
 		BFDFDD7A2B66137700BA2619 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD792B66137700BA2619 /* ErrorModel.swift */; };
 		BFDFDD7C2B6613DD00BA2619 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD7B2B6613DD00BA2619 /* APIManager.swift */; };
 		BFDFDD7E2B661D7300BA2619 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD7D2B661D7300BA2619 /* Observer.swift */; };
@@ -57,6 +59,8 @@
 		7304E16BD15DF50F97B35DDB /* Pods-WeatherAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherAppTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		BB010C4F8ED8CA9512D7C173 /* Pods_WeatherApp_WeatherAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp_WeatherAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCEF3EF2B66555D00BFFB21 /* HomeCountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCountryModel.swift; sourceTree = "<group>"; };
+		BFCEF3F22B665DE000BFFB21 /* HTTPEndPointsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPEndPointsType.swift; sourceTree = "<group>"; };
+		BFCEF3F62B665F2000BFFB21 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		BFDFDD2B2B6564BB00BA2619 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDFDD2E2B6564BB00BA2619 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFDFDD372B6564BC00BA2619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,7 +76,7 @@
 		BFDFDD712B660E9E00BA2619 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		BFDFDD732B66115900BA2619 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BFDFDD752B6611FE00BA2619 /* HomeTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewExtension.swift; sourceTree = "<group>"; };
-		BFDFDD772B66133D00BA2619 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BFDFDD772B66133D00BA2619 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		BFDFDD792B66137700BA2619 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		BFDFDD7B2B6613DD00BA2619 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		BFDFDD7D2B661D7300BA2619 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
@@ -113,6 +117,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BFCEF3F12B665D9D00BFFB21 /* HTTPS */ = {
+			isa = PBXGroup;
+			children = (
+				BFCEF3F22B665DE000BFFB21 /* HTTPEndPointsType.swift */,
+				BFCEF3F62B665F2000BFFB21 /* EndPoints.swift */,
+			);
+			path = HTTPS;
+			sourceTree = "<group>";
+		};
 		BFDFDD222B6564BB00BA2619 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +157,7 @@
 				BFDFDD662B65650300BA2619 /* DataModel */,
 				BFDFDD652B6564FE00BA2619 /* ErrorModel */,
 				BFDFDD602B6564E800BA2619 /* Extensions */,
+				BFCEF3F12B665D9D00BFFB21 /* HTTPS */,
 				BFDFDD642B6564FA00BA2619 /* Networking */,
 				BFDFDD632B6564F600BA2619 /* Resourses */,
 				BFDFDD622B6564F200BA2619 /* Screens */,
@@ -173,6 +187,7 @@
 		BFDFDD5E2B6564DE00BA2619 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BFDFDD712B660E9E00BA2619 /* Country.swift */,
 				BFCEF3EF2B66555D00BFFB21 /* HomeCountryModel.swift */,
 			);
 			path = Model;
@@ -238,7 +253,6 @@
 		BFDFDD662B65650300BA2619 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				BFDFDD712B660E9E00BA2619 /* Country.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -246,7 +260,7 @@
 		BFDFDD672B65650700BA2619 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				BFDFDD772B66133D00BA2619 /* Constants.swift */,
+				BFDFDD772B66133D00BA2619 /* APIConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -331,7 +345,7 @@
 				BFDFDD272B6564BB00BA2619 /* Sources */,
 				BFDFDD282B6564BB00BA2619 /* Frameworks */,
 				BFDFDD292B6564BB00BA2619 /* Resources */,
-				BC32565B710A43F48DC5CA60 /* [CP] Embed Pods Frameworks */,
+				BC14C87DC7FC38CA865C75C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -369,7 +383,7 @@
 				BFDFDD472B6564BD00BA2619 /* Sources */,
 				BFDFDD482B6564BD00BA2619 /* Frameworks */,
 				BFDFDD492B6564BD00BA2619 /* Resources */,
-				19D6F962568CD53A4B3EB868 /* [CP] Embed Pods Frameworks */,
+				A61E1D047B06A6394C0A0216 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -453,23 +467,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		19D6F962568CD53A4B3EB868 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WeatherApp-WeatherAppUITests/Pods-WeatherApp-WeatherAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WeatherApp-WeatherAppUITests/Pods-WeatherApp-WeatherAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeatherApp-WeatherAppUITests/Pods-WeatherApp-WeatherAppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5484C5838CE3E23F1B57A8BA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -514,7 +511,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BC32565B710A43F48DC5CA60 /* [CP] Embed Pods Frameworks */ = {
+		A61E1D047B06A6394C0A0216 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherApp-WeatherAppUITests/Pods-WeatherApp-WeatherAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherApp-WeatherAppUITests/Pods-WeatherApp-WeatherAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeatherApp-WeatherAppUITests/Pods-WeatherApp-WeatherAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC14C87DC7FC38CA865C75C9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -572,7 +586,9 @@
 				BFDFDD832B6620A700BA2619 /* HomeTableViewCell.swift in Sources */,
 				BFDFDD6F2B65672400BA2619 /* HomeViewController.swift in Sources */,
 				BFDFDD742B66115900BA2619 /* HomeViewModel.swift in Sources */,
-				BFDFDD782B66133D00BA2619 /* Constants.swift in Sources */,
+				BFCEF3F32B665DE000BFFB21 /* HTTPEndPointsType.swift in Sources */,
+				BFCEF3F72B665F2000BFFB21 /* EndPoints.swift in Sources */,
+				BFDFDD782B66133D00BA2619 /* APIConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

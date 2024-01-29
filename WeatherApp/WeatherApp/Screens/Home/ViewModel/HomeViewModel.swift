@@ -26,7 +26,7 @@ final class HomeViewModel{
             return
         }
         isLoading.value = true
-        APIManager.shared.getCountry { [weak self] result in
+        APIManager.shared.request(modelType: [Country].self, endPointType: .contry) { [weak self] result in
             self?.isLoading.value = false
             switch result{
             case .success(let countries):
@@ -39,6 +39,21 @@ final class HomeViewModel{
                 
             }
         }
+        
+        
+        //        APIManager.shared.getCountry { [weak self] result in
+        //            self?.isLoading.value = false
+        //            switch result{
+        //            case .success(let countries):
+        //                self?.countries = countries
+        //                self?.mapCountry(countries)
+        //                break
+        //            case .failure(let error):
+        //                print("Error =\(error)")
+        //                break
+        //
+        //            }
+        //        }
     }
     
     func mapCountry(_ countries: [Country]){
