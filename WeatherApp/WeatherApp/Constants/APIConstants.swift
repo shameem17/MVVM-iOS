@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol API{
     var baseUrl: String { get }
     var path: String { get }
     var apiKey: String? { get }
+    var header: HTTPHeaders? { get }
 }
 
 enum APIConstants {
@@ -20,6 +22,17 @@ enum APIConstants {
 }
 
 extension APIConstants: API{
+    var header: HTTPHeaders? {
+        switch self{
+        case .city:
+            return ["apikey": APIConstants.city.apiKey ?? "" ]
+        case .country:
+            return nil
+        case .weather:
+            return ["key": APIConstants.weather.apiKey ?? ""]
+        }
+    }
+    
     
     
     var baseUrl: String {
@@ -36,7 +49,7 @@ extension APIConstants: API{
     var path: String {
         switch self{
         case .city:
-            return "geo/country/cities/"
+            return "geo/country/cities/bd"
         case .country:
             return "v3.1/all/"
         case .weather:

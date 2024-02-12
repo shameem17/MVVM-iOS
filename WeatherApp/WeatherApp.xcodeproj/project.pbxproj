@@ -10,8 +10,9 @@
 		98D6B0CAF23531C2FCE3C8B3 /* Pods_WeatherAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C8DDF75EBC57631F956CF1 /* Pods_WeatherAppTests.framework */; };
 		9C462C444B3034EC4B6E8046 /* Pods_WeatherApp_WeatherAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB010C4F8ED8CA9512D7C173 /* Pods_WeatherApp_WeatherAppUITests.framework */; };
 		BFCEF3F02B66555D00BFFB21 /* HomeCountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEF3EF2B66555D00BFFB21 /* HomeCountryModel.swift */; };
-		BFCEF3F32B665DE000BFFB21 /* HTTPEndPointsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEF3F22B665DE000BFFB21 /* HTTPEndPointsType.swift */; };
+		BFCEF3F32B665DE000BFFB21 /* EndPointItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEF3F22B665DE000BFFB21 /* EndPointItems.swift */; };
 		BFCEF3F72B665F2000BFFB21 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEF3F62B665F2000BFFB21 /* EndPoints.swift */; };
+		BFCEF3F92B6794CF00BFFB21 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEF3F82B6794CF00BFFB21 /* City.swift */; };
 		BFDFDD2F2B6564BB00BA2619 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD2E2B6564BB00BA2619 /* AppDelegate.swift */; };
 		BFDFDD382B6564BC00BA2619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDFDD372B6564BC00BA2619 /* Assets.xcassets */; };
 		BFDFDD3B2B6564BC00BA2619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDFDD392B6564BC00BA2619 /* LaunchScreen.storyboard */; };
@@ -59,8 +60,9 @@
 		7304E16BD15DF50F97B35DDB /* Pods-WeatherAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherAppTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		BB010C4F8ED8CA9512D7C173 /* Pods_WeatherApp_WeatherAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp_WeatherAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCEF3EF2B66555D00BFFB21 /* HomeCountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCountryModel.swift; sourceTree = "<group>"; };
-		BFCEF3F22B665DE000BFFB21 /* HTTPEndPointsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPEndPointsType.swift; sourceTree = "<group>"; };
+		BFCEF3F22B665DE000BFFB21 /* EndPointItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointItems.swift; sourceTree = "<group>"; };
 		BFCEF3F62B665F2000BFFB21 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		BFCEF3F82B6794CF00BFFB21 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		BFDFDD2B2B6564BB00BA2619 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDFDD2E2B6564BB00BA2619 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFDFDD372B6564BC00BA2619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,7 +122,7 @@
 		BFCEF3F12B665D9D00BFFB21 /* HTTPS */ = {
 			isa = PBXGroup;
 			children = (
-				BFCEF3F22B665DE000BFFB21 /* HTTPEndPointsType.swift */,
+				BFCEF3F22B665DE000BFFB21 /* EndPointItems.swift */,
 				BFCEF3F62B665F2000BFFB21 /* EndPoints.swift */,
 			);
 			path = HTTPS;
@@ -253,6 +255,7 @@
 		BFDFDD662B65650300BA2619 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				BFCEF3F82B6794CF00BFFB21 /* City.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -586,8 +589,9 @@
 				BFDFDD832B6620A700BA2619 /* HomeTableViewCell.swift in Sources */,
 				BFDFDD6F2B65672400BA2619 /* HomeViewController.swift in Sources */,
 				BFDFDD742B66115900BA2619 /* HomeViewModel.swift in Sources */,
-				BFCEF3F32B665DE000BFFB21 /* HTTPEndPointsType.swift in Sources */,
+				BFCEF3F32B665DE000BFFB21 /* EndPointItems.swift in Sources */,
 				BFCEF3F72B665F2000BFFB21 /* EndPoints.swift in Sources */,
+				BFCEF3F92B6794CF00BFFB21 /* City.swift in Sources */,
 				BFDFDD782B66133D00BA2619 /* APIConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

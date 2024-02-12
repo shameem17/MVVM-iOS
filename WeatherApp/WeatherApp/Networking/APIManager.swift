@@ -20,15 +20,23 @@ final class APIManager{
     func request<T: Codable>(
         modelType: T.Type,
         endPointType: EndPoints,
+        queryParameters: [String: Any]? = nil,
         compilation: @escaping (ResultHandler<T>)
     ){
+        
         guard let url = endPointType.url else{
             compilation(.failure(.invalidUrl))
             return
         }
+        print("called for \(url)")
         
         let method = endPointType.method
-        AF.request(url, method: method).validate().responseDecodable(of: modelType.self) { response in
+        let body = endPointType.body
+        let header = endPointType.header
+      
+        AF.request(url, method: method, parameters: body, headers: header)
+            .validate(statusCode: 200..<300)
+            .responseDecodable(of: modelType.self) { response in
             switch response.result{
             case .success(let resultData):
                 compilation(.success(resultData))

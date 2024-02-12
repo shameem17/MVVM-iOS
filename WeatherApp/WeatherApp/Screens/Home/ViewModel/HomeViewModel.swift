@@ -40,24 +40,23 @@ final class HomeViewModel{
             }
         }
         
-        
-        //        APIManager.shared.getCountry { [weak self] result in
-        //            self?.isLoading.value = false
-        //            switch result{
-        //            case .success(let countries):
-        //                self?.countries = countries
-        //                self?.mapCountry(countries)
-        //                break
-        //            case .failure(let error):
-        //                print("Error =\(error)")
-        //                break
-        //
-        //            }
-        //        }
     }
     
     func mapCountry(_ countries: [Country]){
         self.homeCountryModel = countries.compactMap({ HomeCountryModel($0) })
+    }
+    
+    func getCities(){
+       // let body: [String: Any] = ["": "bd"]
+        //EndPoints.city.body = body
+        APIManager.shared.request(modelType: [City].self, endPointType: .city) { response in
+            switch response{
+            case .success(let cities):
+                print("Cities=\(cities.count)")
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 

@@ -27,7 +27,8 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewModel.getCountries()
-        self.tableView.reloadData()
+        viewModel.getCities()
+       
     }
     func configure(){
         self.view.backgroundColor = .systemBlue

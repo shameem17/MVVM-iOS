@@ -16,7 +16,8 @@ enum EndPoints{
 }
 
 
-extension EndPoints: HTTPEndPointsType{
+extension EndPoints: EndPointItems{
+    
     var baseUrl: String {
         switch self{
         case .city:
@@ -65,30 +66,34 @@ extension EndPoints: HTTPEndPointsType{
         return .get
     }
     
-    var body: Codable? {
-        switch self{
-        case .contry:
-            return nil
-        case .city:
-            return nil
-        case .weatherByLatlong:
-            return nil
-        case .weatherByPlace:
-            return nil
+    var body: [String: Any]? {
+        get{
+            switch self{
+            case .contry:
+                return nil
+            case .city:
+                return nil
+            case .weatherByLatlong:
+                return nil
+            case .weatherByPlace:
+                return nil
+            }
+        }
+        set{
+            // = newValue
         }
     }
     
-    var header: [String : String]? {
+    var header: HTTPHeaders? {
         switch self{
-            
         case .contry:
-            return nil
+            return APIConstants.country.header
         case .city:
-            return nil
+            return APIConstants.city.header
         case .weatherByLatlong:
-            return nil
+            return APIConstants.weather.header
         case .weatherByPlace:
-            return nil
+            return APIConstants.weather.header
         }
     }
     
