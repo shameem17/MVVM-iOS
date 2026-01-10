@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Trending Movies"
         self.viewModel.getMovieList()
+        self.view.backgroundColor = .white
         configure()
         bindingModel()
     }
