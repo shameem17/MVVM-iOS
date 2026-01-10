@@ -14,6 +14,7 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var imageLabel: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var capitalLable: UILabel!
+    @IBOutlet weak var seeBtn: UIButton!
     @IBOutlet weak var latlongLabel: UILabel!
     @IBAction func seeCities(_ sender: Any) {
         print("clicked")
@@ -34,12 +35,14 @@ class HomeTableViewCell: UITableViewCell {
     func setupCell(){
         self.imageLabel.round(7)
         self.backView.round(10)
+        self.seeBtn.round(15)
         self.backView.border(color: .systemMint, width: 1)
     }
     
     func propagateData(_ country: HomeCountryModel){
-        self.imageLabel.setImage(with: country.flags.png)
-        self.nameLabel.text = country.name.common
+        print("name=\(country.name ?? "")  \(country.flag ?? "") ")
+        self.imageLabel.setImage(with: country.flags?.png ?? "")
+        self.nameLabel.text = " \(country.name ?? "")  \(country.flag ?? "")"
         self.capitalLable.text = country.capital
         self.latlongLabel.text = country.latlng
         

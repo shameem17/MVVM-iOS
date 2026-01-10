@@ -30,6 +30,7 @@ final class HomeViewModel{
             self?.isLoading.value = false
             switch result{
             case .success(let countries):
+                //print("countries=\(countries)")
                 self?.countries = countries
                 self?.mapCountry(countries)
                 break

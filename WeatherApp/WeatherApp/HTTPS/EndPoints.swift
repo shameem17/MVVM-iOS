@@ -70,7 +70,7 @@ extension EndPoints: EndPointItems{
         get{
             switch self{
             case .contry:
-                return nil
+                return ["fields": "name,flag,flags,capital,latlng"]
             case .city:
                 return nil
             case .weatherByLatlong:
@@ -101,7 +101,7 @@ extension EndPoints: EndPointItems{
         switch self{
             
         case .contry:
-            return nil
+            return ["fields": "name"]
         case .city:
             return nil
         case .weatherByLatlong:

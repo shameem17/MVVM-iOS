@@ -35,7 +35,6 @@ class DetailsViewController: UIViewController {
     
     func configure(){
         self.title = movieDetails.title
-        self.view.backgroundColor = .systemIndigo
         self.movieImage.setImage(with: movieDetails.imageUrl)
         self.movieTitle.text = movieDetails.title
         self.descriptionLabel.text = movieDetails.overView

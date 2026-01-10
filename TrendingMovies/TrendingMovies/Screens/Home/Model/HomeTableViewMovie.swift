@@ -14,6 +14,7 @@ class HomeTableViewMovie{
     let releaseDate: String
     let ratings: Double
     let imageUrl: String
+    let language: String
     
     init(movie: Movie){
         self.id = movie.id
@@ -22,5 +23,6 @@ class HomeTableViewMovie{
         self.releaseDate = movie.releaseDate ?? movie.firstAirDate ?? ""
         self.ratings = movie.voteAverage
         self.imageUrl = "\(Constants.API.imageUrl)\(movie.backdropPath)"
+        self.language = movie.originalLanguage.uppercased()
     }
 }

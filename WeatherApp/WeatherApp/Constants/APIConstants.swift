@@ -51,9 +51,9 @@ extension APIConstants: API{
         case .city:
             return "geo/country/cities/bd"
         case .country:
-            return "v3.1/all/"
+            return "v3.1/all"
         case .weather:
-            return "/v1/current.json/"
+            return "v1/current.json/"
         }
     }
     

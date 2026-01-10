@@ -10,19 +10,19 @@ import Foundation
 
 // MARK: - Country
 struct Country: Codable {
-    let name: Name
+    let name: Name?
     let tld: [String]?
-    let cca2: String
+    let cca2: String?
     let independent: Bool?
     let capital: [String]?
-    let region: Region
+    let region: Region?
     let languages: [String: String]?
-    let latlng: [Double]
-    let flag: String
-    let maps: Maps
-    let population: Int
+    let latlng: [Double]?
+    let flag: String?
+    let maps: Maps?
+    let population: Int?
     let fifa: String?
-    let flags: Flags
+    let flags: Flags?
 }
 
 
@@ -42,7 +42,7 @@ struct Maps: Codable {
 
 // MARK: - Name
 struct Name: Codable {
-    let common, official: String
+    let common, official: String?
     let nativeName: [String: Translation]?
 }
 

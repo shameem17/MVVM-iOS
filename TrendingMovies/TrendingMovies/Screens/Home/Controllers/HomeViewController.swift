@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Trending Movies"
+        self.viewModel.getMovieList()
         configure()
         bindingModel()
     }
@@ -30,14 +31,11 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.viewModel.getMovieList()
+       
     }
     
     func configure(){
-        //self.title = "Trending Movie Lsit"
-        self.view.backgroundColor = .systemIndigo
         tableViewSetup()
-        self.tableView.reloadData()
     }
     
     func bindingModel(){
