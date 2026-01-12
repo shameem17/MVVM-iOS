@@ -49,11 +49,11 @@ extension APIConstants: API{
     var path: String {
         switch self{
         case .city:
-            return "geo/country/cities/bd"
+            return "geo/country/cities/"
         case .country:
             return "v3.1/all"
         case .weather:
-            return "v1/current.json/"
+            return "v1/current.json"
         }
     }
     
@@ -65,7 +65,7 @@ extension APIConstants: API{
         case .country:
             return nil
         case .weather:
-            return "1f1c2b7ed5d74ad3ae160133231910"
+            return "9f1126b3f8aa461ca30122521261001"
         }
     }
     

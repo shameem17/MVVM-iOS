@@ -9,10 +9,10 @@ import Foundation
 
 // MARK: - City
 struct City: Codable {
-    let geoID: Int
-    let name, stateOrRegion: String
-    let country: CityCountry
-    let latitude, longitude: Double
+    let geoID: Int?
+    let name, stateOrRegion: String?
+    let country: CityCountry?
+    let latitude, longitude: Double?
 
     enum CodingKeys: String, CodingKey {
         case geoID = "geo_id"

@@ -10,9 +10,9 @@ import Alamofire
 
 enum EndPoints{
     case contry
-    case city
-    case weatherByLatlong
-    case weatherByPlace
+    case city(countryCode: String)
+    case weatherByLatlong(lat: Double?, long: Double?)
+    case weatherByPlace(place: String)
 }
 
 
@@ -58,8 +58,20 @@ extension EndPoints: EndPointItems{
     }
     
     var url: URL? {
-        return URL(string: "\(baseUrl)\(path)")
-
+        switch self {
+        case .city(let countryCode):
+            return URL(string: "\(baseUrl)\(path)\(countryCode)")
+        case .weatherByPlace(place: let place):
+            return URL(string: "\(baseUrl)\(path)?key=\(APIConstants.weather.apiKey ?? "")&q=\(place)")
+        case .weatherByLatlong(lat: let lat, long: let long):
+            if let latitude = lat, let longitude = long{
+                return URL(string: "\(baseUrl)\(path)?key=\(APIConstants.weather.apiKey ?? "")&q=\(latitude),\(longitude)")
+            }else{
+                return URL(string: "\(baseUrl)\(path)?key=\(APIConstants.weather.apiKey ?? "")")
+            }
+        default:
+            return URL(string: "\(baseUrl)\(path)")
+        }
     }
     var method: HTTPMethod {
         //all get method so get to all
@@ -102,12 +114,14 @@ extension EndPoints: EndPointItems{
             
         case .contry:
             return ["fields": "name"]
-        case .city:
-            return nil
+        case .city(let countryCode):
+            return ["countryCode": countryCode]
         case .weatherByLatlong:
-            return nil
-        case .weatherByPlace:
-            return nil
+            return ["key": APIConstants.weather.apiKey ?? ""]
+        case .weatherByPlace(place: let place):
+            return ["key": APIConstants.weather.apiKey ?? "",
+                    "q": place
+            ]
         }
     }
     

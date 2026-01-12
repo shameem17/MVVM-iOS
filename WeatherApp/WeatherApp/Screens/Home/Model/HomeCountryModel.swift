@@ -22,7 +22,7 @@ final class HomeCountryModel: Codable {
         self.cca2 = country.cca2
         self.capital = country.capital?.first ?? ""
         self.region = country.region
-        self.latlng = "\(country.latlng?[0]), \(country.latlng?[1])"
+        self.latlng = "\(country.latlng?[0] ?? 0.0), \(country.latlng?[1] ?? 0.0)"
         self.flag = country.flag
         self.flags = country.flags
     }

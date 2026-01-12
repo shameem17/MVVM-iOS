@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var searchBar: UITextField!
     //viewModel
     var viewModel = HomeViewModel()
     
@@ -20,18 +21,21 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = .white
+        self.tableView.backgroundColor = .white
         configure()
         binding()
+        viewModel.getCountries()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.getCountries()
-        viewModel.getCities()
-       
     }
     func configure(){
-        self.view.backgroundColor = .systemBlue
+        self.searchBar.delegate = self
         setupTableView()
     }
     
@@ -47,10 +51,22 @@ class HomeViewController: UIViewController {
                 }else{
                     self.activityIndicator.stopAnimating()
                     print("Loding finished")
-                    self.tableView.reloadData()
                 }
+            }
+        }
+        
+        viewModel.homeCountryModel.binding { [weak self] countries in
+            if countries != nil{
+                self?.tableView.reloadData()
             }
         }
     }
 
+}
+
+extension HomeViewController: UITextFieldDelegate{
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        print("search text: \(textField.text ?? "")")
+        viewModel.searchForCountry(with: textField.text ?? "")
+    }
 }

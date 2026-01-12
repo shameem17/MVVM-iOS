@@ -39,7 +39,10 @@ class HomeTableViewCell: UITableViewCell {
         self.backView.border(color: .systemMint, width: 1)
     }
     
-    func propagateData(_ country: HomeCountryModel){
+    func propagateData(_ country: HomeCountryModel?){
+        guard let country = country else{
+            return
+        }
         print("name=\(country.name ?? "")  \(country.flag ?? "") ")
         self.imageLabel.setImage(with: country.flags?.png ?? "")
         self.nameLabel.text = " \(country.name ?? "")  \(country.flag ?? "")"

@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="WeatherApp" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="68C-cG-bpY" id="o98-3k-hPI"/>
+                <outlet property="searchBar" destination="wHT-Xs-tvp" id="vFP-wh-ocd"/>
                 <outlet property="tableView" destination="H73-7f-wbI" id="Uzn-th-2e2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,29 +22,44 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H73-7f-wbI">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <rect key="frame" x="0.0" y="109" width="393" height="709"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="68C-cG-bpY">
                     <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </activityIndicatorView>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Country" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" background="magnifyingglass" catalog="system" disabledBackground="magnifyingglass" translatesAutoresizingMaskIntoConstraints="NO" id="wHT-Xs-tvp">
+                    <rect key="frame" x="0.0" y="59" width="393" height="45"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="0VY-wN-Am2"/>
+                    </constraints>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="68C-cG-bpY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3oy-Lm-OtJ"/>
                 <constraint firstItem="68C-cG-bpY" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="5y4-xy-fb1"/>
+                <constraint firstItem="wHT-Xs-tvp" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Q7g-AZ-0cX"/>
                 <constraint firstItem="H73-7f-wbI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Qw0-RL-QOf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H73-7f-wbI" secondAttribute="trailing" id="Yh9-6u-QjZ"/>
+                <constraint firstItem="wHT-Xs-tvp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="g7Z-M5-x5u"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="H73-7f-wbI" secondAttribute="bottom" id="x4O-JG-iKY"/>
-                <constraint firstItem="H73-7f-wbI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zcS-bA-xPn"/>
+                <constraint firstItem="wHT-Xs-tvp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yb2-w9-LVM"/>
+                <constraint firstItem="H73-7f-wbI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="zcS-bA-xPn"/>
             </constraints>
             <point key="canvasLocation" x="102" y="20"/>
         </view>
     </objects>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

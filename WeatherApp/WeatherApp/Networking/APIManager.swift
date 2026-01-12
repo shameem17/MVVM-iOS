@@ -33,7 +33,7 @@ final class APIManager{
         let method = endPointType.method
         let body = endPointType.body
         let header = endPointType.header
-      
+        
         AF.request(url, method: method, parameters: body, headers: header)
             .validate(statusCode: 200..<300)
             .responseDecodable(of: modelType.self) { response in
